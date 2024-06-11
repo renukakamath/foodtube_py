@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="#222121"
+    tools:context=".DIetMode">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:shadowColor="#1B1B1B"
+            android:shadowDx="5"
+            android:shadowDy="2"
+            android:shadowRadius="7"
+            android:gravity="top"
+            android:layout_marginBottom="0dp"
+            android:text="Diet Mode"
+            android:textColor="#E4E4E4"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-35dp"
+            android:textColor="@color/hint"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"
+            android:text="Search Based on Calories" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/from"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+
+                android:layout_marginRight="5dp"
+                android:background="@drawable/square"
+                android:padding="15dp"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint"
+                android:inputType="textPersonName"
+                android:hint="From.." />
+
+            <EditText
+                android:id="@+id/to"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+
+                android:background="@drawable/square"
+                android:padding="15dp"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint"
+                android:inputType="textPersonName"
+                android:hint="To.." />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/search" />
+
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/horizontal_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="10dp" >
+
+
+        </ListView>
+
+
+
+        <TextView
+            android:id="@+id/nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+
+            android:textColor="@color/hint"
+            android:layout_marginBottom="10dp"
+            android:textSize="25dp"
+
+            android:text="No Results" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/white"
+
+        app:fabCradleMargin="20dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomview"
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:background="@color/white"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/bottom_nav_menu"
+
+            android:outlineSpotShadowColor="@color/white"
+            >
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

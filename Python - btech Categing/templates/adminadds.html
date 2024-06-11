@@ -1,0 +1,60 @@
+
+{% include 'admin_header.html' %}
+<center>
+
+	<h1 style="margin-top: 100px">MANAGE ADVERTISEMENT</h1>
+	<form method="post" enctype="multipart/form-data">
+	
+	
+
+		<table class="table" style="width:  700px">
+				<tr>
+			<th>files</th>
+			<td><input type="file" name="name" class="form-control" ></td>
+		</tr>	
+				<tr>
+			<th>Descripton</th>
+			<td><input type="text" name="desc" class="form-control" ></td>
+		</tr>
+			
+	
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="submit" value="ADD" class="btn btn-primary"></td>
+		</tr>
+
+
+		</table>
+
+		<h1>Recipy ADDED </h1>
+		<table class="table" width="600px">
+			<tr>
+				<th>SL.NO</th>
+				<th>Title</th>
+				<th>ADD </th>
+				
+				
+			</tr>
+			{% for row in data['adds'] %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['title']}}</td>
+				
+				<td><video  width="320" height="240" controls>
+  <source src="/{{row['addpath']}}" type="video/mp4">
+  <source src="/{{row['addpath']}}" type="video/ogg"></td>
+			
+				
+
+				<!-- <td><a href="?action=update&id={{ row['grivance_id'] }}" class="btn btn-warning">UPDATE</a></td>
+				<td><a href="?action=delete&id={{ row['grivance_id'] }}" class="btn btn-danger" >DELETE</a></td>
+				 -->
+			</tr>
+			{% endfor%}
+		</table>
+		
+	
+		
+	
+	</form>
+</center>
+{%include 'footer.html'%}
